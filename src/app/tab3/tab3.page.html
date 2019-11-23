@@ -1,9 +1,75 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab Three
+    <ion-title align="center">
+      EQUALIZE
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-text color="primary">
+    <h2 align="center">Comunidade</h2>
+  </ion-text>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card id="com-1" (click)="imagesPlants()">
+          <ion-card-content>
+            <ion-img src="../../assets/img/plant-icon.svg"></ion-img>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card id="com-2" (click)="imagesSew()">
+          <ion-card-content>
+            <ion-img src="../../assets/img/pipe-512.png"></ion-img>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card id="com-3" (click)="imagesThrash()">
+          <ion-card-content>
+            <ion-img src="../../assets/img/recycle.png"></ion-img>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card *ngIf="plants">
+    <ion-card-header>
+      <ion-card-title>Plantas Medicinais</ion-card-title>
+      <ion-img src="../../assets/img/horta.jpg"></ion-img>
+    </ion-card-header>
+
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="sews">
+    <ion-card-header>
+      <ion-card-title>Wetlands</ion-card-title>
+      <ion-img src="../../assets/img/wetland.jpg"></ion-img>
+    </ion-card-header>
+
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="thrash">
+    <ion-card-header>
+      <ion-card-title>Descarte do lixo</ion-card-title>
+      <ion-img src="../../assets/img/lixo.jpg"></ion-img>
+    </ion-card-header>
+
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
