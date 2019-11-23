@@ -8,18 +8,63 @@
 
 <ion-content>
   <ion-text color="primary">
-    <h2 align="center">Sobre o projeto</h2>
+    <h2 align="center" *ngIf="show">Sobre o projeto</h2>
   </ion-text>
-  <ion-grid>
+  <ion-grid *ngIf="show">
     <ion-row>
       <ion-col>
         <iframe src="https://www.youtube.com/embed/CmoyqnhvWdI" align="center" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </ion-col>
     </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-img (click)="display()" src="../../assets/img/ods-logo.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
   </ion-grid>
-  <br>
 
-    <ion-img src="../../assets/img/ods-logo.jpg"></ion-img>
+  <ion-grid *ngIf="!show">
+    <ion-row>
+      <ion-col>
+        <h4 align="center">Atuação direta</h4>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-img src="../../assets/img/atuacao_direta.jpg" align="center"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <h4 align="center">Atuação indireta</h4>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-img src="../../assets/img/atuacao_indireta.jpg" align="center"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <h4 align="center">Veja mais</h4>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <a href="https://nacoesunidas.org/pos2015/agenda2030/">
+          <ion-img src="../../assets/img/ods2.jpg" align="center"></ion-img>
+        </a>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" (click)="display()">Voltar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 
 </ion-content>

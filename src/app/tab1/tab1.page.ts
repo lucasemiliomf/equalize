@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-
+  public show = true;
   constructor() {}
+
+  display() {
+    this.show = !this.show;
+  }
 
 }
